@@ -21,7 +21,9 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://notes-app-delta-lac.vercel.app", // your frontend URL
+    methods: "GET, POST, PUT, DELETE",  // specify allowed methods if needed
+    allowedHeaders: "Content-Type, Authorization", // specify allowed headers
   })
 );
 //Create Account
